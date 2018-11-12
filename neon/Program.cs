@@ -111,11 +111,11 @@ namespace Neo.Compiler
                 option.useSysCallInteropHash = false;// !bCompatible;
                 NeoModule am = conv.Convert(mod, option);
                 bytes = am.Build();
-                /*byte[] temp = am.Build();
+                byte[] temp = am.Build();
                 bytes = new byte[temp.Length + 1];
                 temp.CopyTo(bytes, 0);
                 byte[] flag = new byte[] { 0xAB };
-                flag.CopyTo(bytes, temp.Length);*/
+                flag.CopyTo(bytes, temp.Length);
                 log.Log("convert succ");
 
 
