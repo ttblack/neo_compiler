@@ -76,7 +76,7 @@ namespace vmtool
             //hash
             StringBuilder sb = new StringBuilder();
             sb.Append("0x1c");
-            foreach (var b in hash.ToArray())
+            foreach (var b in hash.Reverse().ToArray())
             {
                 sb.Append(b.ToString("x02"));
             }

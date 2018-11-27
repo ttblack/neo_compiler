@@ -157,7 +157,8 @@ namespace Neo.Compiler.JVM
 
                             for (var i = 0; i < 20; i++)
                             {
-                                bytes[i] = byte.Parse(info.Substring(i * 2, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
+                                //  bytes[i] = byte.Parse(info.Substring(i * 2, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
+                                bytes[i] = byte.Parse(info.Substring((i + 1) * 2, 2), System.Globalization.NumberStyles.AllowHexSpecifier);
                             }
                             //string hexhash 需要反序
                             callhash = bytes.Reverse().ToArray();
