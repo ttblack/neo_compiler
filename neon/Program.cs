@@ -108,7 +108,7 @@ namespace Neo.Compiler
                 var conv = new ModuleConverter(log);
                 ConvOption option = new ConvOption();
                 option.useNep8 = !bCompatible;
-                option.useSysCallInteropHash = false;// !bCompatible;
+                option.useSysCallInteropHash = !bCompatible;
                 NeoModule am = conv.Convert(mod, option);
                 bytes = am.Build();
               //  byte[] temp = am.Build();
